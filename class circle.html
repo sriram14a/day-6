@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+      <script>
+        class circle{
+            constructor(radious,color){
+                this.radious=radious;
+                this.color=color;
+            }
+            setRadious(R){
+                this.radious=R;
+            }
+            getRadious(){
+                return(`The radious of the circle is ${this.radious}`)
+            }
+            setColor(C){
+                this.color=C;
+            }
+            getColor(){
+                return(`The color of the circle is ${this.color}`)
+            }
+            getArea(){
+                return(`The Area of the circle is ${(Math.PI*this.radious*this.radious).toFixed(2)}`)
+            }
+            getCircumference(){
+                return(`The Circumference of the circle is ${(2*Math.PI*this.radious).toFixed(2)}`)
+            }
+        }
+        let circle1=new circle(3,"green");
+        circle1.setRadious(4);
+        circle1.setColor("blue");
+
+        console.log(circle1.getRadious());
+        console.log(circle1.getColor());
+        console.log(circle1.getArea());
+        console.log(circle1.getCircumference());
+
+
+        
+      </script>
+</body>
+</html>

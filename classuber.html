@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6</title>
+</head>
+<body>
+    <script>
+        class uber{
+            constructor(distance,price,car){
+                this.distance=distance;
+                this.price=price;
+                this.car=car
+            }
+            setdistance(dist){
+                this.distance=dist;
+            }         
+            getPrice(){
+                let rate=(this.distance)*(this.price);
+                return (`The price is ${rate}`);
+            }
+            getDiscount(){
+                if(this.car==="bmw"){
+                    if(this.distance > 100 ){
+                        this.discount=((this.distance*this.price)*10)/100;
+                        this.price=(this.distance*this.price)-((this.distance*this.price)*10)/100;
+                    return (`Discount for ${this.distance} kms Traveling in ${this.car} is ${this.discount} and the price is ${this.price}`)
+                }else{
+                    return(`No discount for ${this.distance} kms`)
+                }}
+                
+                
+                else{
+                    if(this.distance > 100 ){
+                        this.discount=((this.distance*this.price)*20)/100;
+                        this.price=(this.distance*this.price)-((this.distance*this.price)*20)/100;
+                    return (`Discount for ${this.distance} kms is ${this.discount} and the price is ${this.price}`)
+                }else{
+                    return(`No discount for ${this.distance} kms`)
+
+                }}
+            }
+        }
+
+            let uber1=new uber(88,25,"bmw");
+            uber1.setdistance(135);
+
+            console.log(uber1.getPrice())
+            console.log(uber1.getDiscount())
+            </script>
+</body>
+</html>
